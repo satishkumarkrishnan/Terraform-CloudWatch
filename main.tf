@@ -8,3 +8,13 @@ terraform {
     }
   }
 }
+
+#TF code for AWS CW Log Group Creation
+resource "aws_cloudwatch_log_group" "tokyo_cw" {
+  name = "tokyo_cw"
+
+  tags = {
+    Environment = "dev"
+    Application = "hw"
+  }
+}
