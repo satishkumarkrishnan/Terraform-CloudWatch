@@ -23,4 +23,5 @@ resource "aws_cloudwatch_log_group" "tokyo_cw" {
     Environment = "dev"
     Application = "helloworld"
   }
+  depends_on = []
 }
