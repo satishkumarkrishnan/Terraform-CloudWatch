@@ -18,7 +18,7 @@ module "cloudwatch" {
 resource "aws_cloudwatch_log_group" "tokyo_cw" {
   name = "tokyo_cw"  
   retention_in_days = "7"
-  kms_key_id = module.cloudwatch.kms_arn
+  #kms_key_id = module.cloudwatch.kms_arn
   tags = {
     Environment = "dev"
     Application = "helloworld"
