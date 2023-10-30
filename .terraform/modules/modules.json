@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"cloudwatch","Source":"git::ssh://git@github.com/satishkumarkrishnan/Terraform-KMS.git?ref=main","Dir":".terraform/modules/cloudwatch"}]}
