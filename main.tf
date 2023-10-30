@@ -15,12 +15,12 @@ module "cloudwatch" {
 }
 
 #TF code for AWS CW Log Group Creation
-resource "aws_cloudwatch_log_group" "tokyo_cw" {
+/*resource "aws_cloudwatch_log_group" "tokyo_cw" {
   name = "tokyo_cw"  
   retention_in_days = "7"
-  kms_key_id = module.cloudwatch.kms_arn
+  kms_key_id = module.cloudwatch.kms_key_id
   tags = {
     Environment = "dev"
     Application = "helloworld"
   }
-}
+}*/
