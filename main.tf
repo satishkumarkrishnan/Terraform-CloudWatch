@@ -12,7 +12,7 @@ terraform {
 #Module code for importing KMS code
 module "cloudwatch" {
   source ="git@github.com:satishkumarkrishnan/Terraform-KMS.git?ref=main"
-  depends_on = [module.kms.tok]
+  depends_on = [module.kms.tokyo_kms_key]
 }
 
 #TF code for AWS CW Log Group Creation
