@@ -1,9 +1,9 @@
 resource "aws_cloudwatch_metric_alarm" "tokyo_cw_ma" {
   alarm_name                = "tokyo-cw-ma"
   comparison_operator       = "GreaterThanOrEqualToThreshold"
-  evaluation_periods        = 2
+  evaluation_periods        = 1
   metric_name               = "CPUUtilization"
-  namespace                 = "AWS/EC2"
+  namespace                 = "AWS/Autoscaling"
   period                    = 10
   statistic                 = "Average"
   threshold                 = 1
