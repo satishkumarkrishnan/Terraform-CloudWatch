@@ -1,5 +1,5 @@
 
-resource "aws_cloudwatch_log_data_protection_policy" "tokyo_cw_dp" {
+/*resource "aws_cloudwatch_log_data_protection_policy" "tokyo_cw_dp" {
   log_group_name = aws_cloudwatch_log_group.tokyo_cw.name
 
   policy_document = jsonencode({
@@ -31,4 +31,4 @@ resource "aws_cloudwatch_log_data_protection_policy" "tokyo_cw_dp" {
       }
     ]
   })
-}
+}*/
