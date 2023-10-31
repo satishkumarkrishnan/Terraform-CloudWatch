@@ -14,9 +14,9 @@ module "cloudwatch" {
   source ="git@github.com:satishkumarkrishnan/Terraform-KMS.git?ref=main"
 }
 
-#module "vpc" {
-#  source ="git@github.com:satishkumarkrishnan/terraform-aws-vpc.git?ref=main"
-#}
+module "vpc" {
+  source ="git@github.com:satishkumarkrishnan/terraform-aws-vpc.git?ref=main"
+}
 
 #TF code for AWS CW Log Group Creation
 resource "aws_cloudwatch_log_group" "tokyo_cw" {
