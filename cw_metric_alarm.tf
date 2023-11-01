@@ -1,4 +1,4 @@
-/*resource "aws_cloudwatch_metric_alarm" "tokyo_cw_ma" {
+resource "aws_cloudwatch_metric_alarm" "tokyo_cw_ma" {
   alarm_name                = "tokyo-cw-ma"
   comparison_operator       = "GreaterThanOrEqualToThreshold"
   evaluation_periods        = 1
@@ -14,4 +14,4 @@
     AutoScalingGroupName = module.asg.asg_name
   }     
    alarm_actions     = [module.asg.asg_policy_arn]
-}*/
+}
