@@ -20,6 +20,7 @@ module "vpc" {
 
 module "asg" {
   source="git@github.com:satishkumarkrishnan/terraform-aws-asg.git?ref=main"  
+  depends_on = [module.vpc]
 }
 
 #TF code for AWS CW Log Group Creation
