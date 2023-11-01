@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "tokyo_cw_ma" {
   threshold                 = "80"
   alarm_description         = "This metric monitors ec2 cpu utilization"
   treat_missing_data        = "missing"
-  #insufficient_data_actions = []
+  insufficient_data_actions = []
   dimensions = {
     AutoScalingGroupName = module.asg.asg_name
   }     
