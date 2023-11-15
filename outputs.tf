@@ -1,6 +1,5 @@
 output "asg_ec2" {
   value = module.asg.instance.id  
-  depends_on = [module.asg]
 }
 
 output "cw_log_group" {
