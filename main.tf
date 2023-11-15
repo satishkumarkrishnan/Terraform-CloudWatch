@@ -10,9 +10,6 @@ terraform {
 }
 
 #Module code for importing KMS code
-module "cloudwatch" {
-  source ="git@github.com:satishkumarkrishnan/Terraform-KMS.git?ref=main"  
-}
 
 module "vpc" {
   source ="git@github.com:satishkumarkrishnan/terraform-aws-vpc.git?ref=main"
@@ -23,11 +20,16 @@ module "asg" {
   depends_on = [module.vpc]
 }
 
+module "kms" {
+  source ="git@github.com:satishkumarkrishnan/Terraform-KMS.git?ref=main"
+  depends_on = [module.asg]
+}
+
 #TF code for AWS CW Log Group Creation
 resource "aws_cloudwatch_log_group" "tokyo_cw" {
   name = "tokyo_cw"  
   retention_in_days = "7"
-  kms_key_id = module.cloudwatch.kms_arn
+  kms_key_id = module.kms.kms_arn
   tags = {
     Environment = "dev"
     Application = "helloworld"
