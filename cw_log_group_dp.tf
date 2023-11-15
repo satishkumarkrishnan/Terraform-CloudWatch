@@ -14,7 +14,7 @@ resource "aws_cloudwatch_log_data_protection_policy" "tokyo_cw_dp" {
           Audit = {
             FindingsDestination = {
               S3 = {
-                Bucket = module.cloudwatch.s3_bucket_name
+                Bucket = aws_s3_bucket.kms_encrypted.name                
               }
             }
           }
