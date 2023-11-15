@@ -7,5 +7,6 @@ output "cw_log_group" {
 }
 
 output "s3_bucket" {
-  value = aws_s3_bucket.kms_encrypted.name
+  #value = aws_s3_bucket.kms_encrypted.name
+  value = aws_s3_bucket.kms_encrypted.bucket
 }
