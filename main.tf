@@ -11,10 +11,6 @@ terraform {
 
 #Module code for importing KMS code
 
-module "vpc" {
-  source ="git@github.com:satishkumarkrishnan/terraform-aws-vpc.git?ref=main"
-  }
-
 module "asg" {
   source="git@github.com:satishkumarkrishnan/terraform-aws-asg.git?ref=main" 
 }
