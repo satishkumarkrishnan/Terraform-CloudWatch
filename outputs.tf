@@ -41,5 +41,5 @@ output "vpc_be_sg" {
 }
 
 output "vpc_az" {
-  value = module.asg.azs[*]  
+  value = module.asg.vpc_az 
 }
