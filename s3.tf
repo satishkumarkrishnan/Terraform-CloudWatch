@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "kms_encrypted" {
   bucket = "tokyo-tf-kms"
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
-    prevent_destroy = false
+    prevent_destroy = true
   }
 }
 
