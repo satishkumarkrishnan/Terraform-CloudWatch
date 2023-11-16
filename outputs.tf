@@ -19,7 +19,7 @@ output "kms_id" {
 #VPC Outputs
 #VPC Outputs
 output "vpc_id" {
-  value = module.asg.module.vpc.vpc_id
+  value = module.asg.vpc_id
   #module.asg.module.vpc.aws_vpc.tokyo-vpc
 }
 
