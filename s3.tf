@@ -2,9 +2,9 @@
 resource "aws_s3_bucket" "kms_encrypted" {
   bucket = "tokyo-tf-kms"
   # Prevent accidental deletion of this S3 bucket
-  #lifecycle {
-  #  prevent_destroy = true
-  #}
+  lifecycle {
+    prevent_destroy = false
+  }
 }
 
 # Enable versioning so you can see the full revision history of your
@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "kms_encrypted" {
 resource "aws_s3_bucket_versioning" "enabled" {
   bucket = aws_s3_bucket.kms_encrypted.id  
   versioning_configuration {
-    status = "Enabled"
+    status = "Disabled"
   }
 }
 # Enable server-side encryption by default
