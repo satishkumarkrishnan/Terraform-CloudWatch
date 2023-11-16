@@ -12,8 +12,7 @@ terraform {
 #Module code for importing KMS code
 
 module "asg" {
-  source="git@github.com:satishkumarkrishnan/terraform-aws-asg.git?ref=main" 
-  depends_on = [module.vpc]
+  source="git@github.com:satishkumarkrishnan/terraform-aws-asg.git?ref=main"   
 }
 
 module "vpc" {
