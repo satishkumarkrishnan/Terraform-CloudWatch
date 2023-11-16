@@ -40,6 +40,10 @@ output "vpc_be_sg" {
   value = module.asg.vpc_be_sg
 }
 
-output "vpc_az" {
-  value = module.asg.vpc_az
+output "vpc_az1" {
+  value = module.asg.vpc_az1
+}
+
+output "vpc_az2" {
+  value = module.asg.vpc_az2
 }
