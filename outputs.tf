@@ -33,6 +33,6 @@ output "vpc_be_sg" {
 }
 
 output "kms_arn" {
-  value = kms_key_id
+  value = module.kms.kms_arn
 }
 
