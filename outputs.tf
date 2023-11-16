@@ -16,8 +16,9 @@ output "kms_id" {
   #value = aws_s3_bucket.kms_encrypted.name
   value = module.kms.kms_arn
 }
+
 #VPC Outputs
-#VPC Outputs
+
 output "vpc_id" {
   value = module.asg.vpc_id
   #module.asg.module.vpc.aws_vpc.tokyo-vpc
@@ -37,4 +38,8 @@ output "vpc_fe_sg" {
 
 output "vpc_be_sg" {
   value = module.asg.vpc_be_sg
+}
+
+output "vpc_az" {
+  value = module.asg.azs[*]  
 }
