@@ -19,21 +19,22 @@ output "kms_id" {
 #VPC Outputs
 #VPC Outputs
 output "vpc_id" {
-  value = module.vpc.vpc_id
+  value = module.asg.module.vpc.vpc_id
+  #module.asg.module.vpc.aws_vpc.tokyo-vpc
 }
 
 output "vpc_fe_subnet" {
-  value = module.vpc.vpc_fe_subnet
+  value = module.asg.module.vpc.vpc_fe_subnet
 }
 
 output "vpc_be_subnet" {
-  value = module.vpc.vpc_be_subnet
+  value = module.asg.module.vpc.vpc_be_subnet
 }
 
 output "vpc_fe_sg" {
-  value = module.vpc.vpc_fe_sg
+  value = module.asg.module.vpc.vpc_fe_sg
 }
 
 output "vpc_be_sg" {
-  value = module.vpc.vpc_be_sg
+  value = module.asg.module.vpc.vpc_be_sg
 }
