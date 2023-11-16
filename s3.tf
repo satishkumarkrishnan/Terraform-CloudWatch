@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "kms_encrypted" {
 resource "aws_s3_bucket_versioning" "enabled" {
   bucket = aws_s3_bucket.kms_encrypted.id  
   versioning_configuration {
-    status = "Enabled"
+    status = "Disabled"
   }
 }
 # Enable server-side encryption by default
