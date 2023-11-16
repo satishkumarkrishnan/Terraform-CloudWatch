@@ -11,9 +11,9 @@ terraform {
 
 #Module code for importing KMS code
 
-module "asg" {
-  source="git@github.com:satishkumarkrishnan/terraform-aws-asg.git?ref=main" 
-}
+#module "asg" {
+#  source="git@github.com:satishkumarkrishnan/terraform-aws-asg.git?ref=main" 
+#}
 
 module "kms" {
   source ="git@github.com:satishkumarkrishnan/Terraform-KMS.git?ref=main" 
